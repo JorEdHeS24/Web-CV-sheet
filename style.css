@@ -85,7 +85,7 @@ h1, h2{
 }
 
 li {
-  list-style: none; /* Adiós al punto y al ::marker */
+  list-style: none;
   position: relative;
   padding-left: 30px;
   margin-bottom: 10px;
@@ -103,7 +103,7 @@ li {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%); /* Centrado vertical perfecto */
+  transform: translateY(-50%);
   
   width: 20px;
   height: 20px;

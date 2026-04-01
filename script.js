@@ -1,8 +1,9 @@
 import { 
     CARD_TEXT_CONTAINER, 
     EXPIRIENCE_DETAILS, 
-    FORMATION_DETAILS} from "./config/Constants.js"
-import { SOFT_SKILLS_TAGS, WORK_SKILLS_TAGS } from "./config/Constants.js"
+    FORMATION_DETAILS,
+    SOFT_SKILLS_TAGS, 
+    WORK_SKILLS_TAGS } from "./config/Constants.js"
 
 
 
@@ -13,6 +14,8 @@ const formationList = document.querySelector(".formation-list")
 const skillsContainer = document.querySelector(".skills-content")
 const workSkillContainer = document.querySelector(".work-skills-tags")
 
+
+// Creates a generic estructure that spesify the structure of the summry card with pieces of information of the user.
 const BgrSummaryCard = (section_content, card_text_container, list_element)=>{
     for(let detail in section_content)
     {
@@ -33,6 +36,7 @@ const BgrSummaryCard = (section_content, card_text_container, list_element)=>{
      
 }
 
+// Add to the container a personalize link that serves like button to add a new summary card.
 function addLink(HTML_Element, text)
 {
     let addLink = document.createElement("li")
@@ -48,11 +52,13 @@ function addLink(HTML_Element, text)
 let softSkillsTags  = SOFT_SKILLS_TAGS
 let workSkillsTags  = WORK_SKILLS_TAGS
 
+// Creates a new unformated container with a text that is thinked to be formated as a tag.
 function tagCreate(container, text)
 {    
     return container.innerHTML += `<p class="tag">${text}</p>`
 }
 
+// Add a new tag to the espedified container with the spesified information, also recive a tagCreate parameters as the that function is called inside.
 function addNewTag(containerElement, tagCreateContainer,softSkillsTags)
 {
     for (let skill in softSkillsTags)
