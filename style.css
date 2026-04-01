@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    /* THEME COLOR */
+    --white-color: #eee;
+    --black-color: #000;
+    --gray-color-1: #555;
+    --green-color-1:#282;
+
+    --main-color: greenyellow;
+    --afbe-cicle-color: var(--green-color-1);
+    --main-bgr-color: var(--black-color);
+
+    --text-color: var(--white-color);
+    --right-bgr-color:var(--white-color);
+    --left-bgr-color:var(--gray-color-1);
+
+    --line-color: var(--main-color);
+    --title-color: var(--main-color);
+    --afbe-shadow-color: var(--main-color);
+    --afbe-vertical-line-color: var(--main-color);
+
+    /* IMAGES */
+    --li-imgs-phone: url("/img/smartphone-svgrepo-com.svg");
+    --li-imgs-email: url("/img/email-9-svgrepo-com.svg");
+    --li-imgs-spain: url("/img/spain-svgrepo-com.svg");
+    --li-imgs-usa: url("/img/usa-svgrepo-com.svg");
+
+    /* SIZE ADJUST  */
+    --content-font-size: 15px;
+    --title-font-size: 20px;
+    
+}
+
+body{
+    padding: 100px 0 100px 0;
+    
+}
+
+
+main{
+    display: flex;
+    width: 21cm ;
+    border: 2px solid black;
+    height: 29.7cm;
+    /* padding: 1.6cm 2.54cm 1.52cm 2.54cm; */    
+    justify-self: center;
+    font-size: var(--content-font-size) ;
+
+}
+
+h1, h2{
+    font-size:var(--title-font-size) ;
+}
+
+/* ------------------------------- */
+/* --------RIGHT CONTAINER--------- */
+/* ------------------------------- */
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    width: 35%;    
+    background-color: var(--left-bgr-color);
+    padding: 25px 20px;    
+    color: var(--text-color);
+    gap: 30px; 
+}
+
+
+li {
+  list-style: none; /* Adiós al punto y al ::marker */
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.right-container ul{
+    overflow: hidden;
+    
+}
+
+/* li icons format  */
+
+.right-container li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical perfecto */
+  
+  width: 20px;
+  height: 20px;
+  
+  background-image: var(--li-imgs-phone);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contacts >ul>li:nth-child(2)::before{
+    background-image: var(--li-imgs-email);
+}
+.languages>ul>li:nth-child(1)::before{
+    background-image: var(--li-imgs-spain);
+}
+.languages>ul>li:nth-child(2)::before{
+    background-image: var(--li-imgs-usa);
+}
+
+.title{
+    color: var(--title-color);
+}
+
+.name-title{
+    display: flex;
+    width: fit-content;
+    align-self: center;
+}
+.aspirant-name{
+    justify-self: center;
+}
+.photo{
+    background: var(--main-bgr-color);    
+    height: 230px;
+    border-radius: 100%;
+}
+
+
+.contacts{
+           
+}
+
+.underline{
+    border-bottom: 3px solid var(--line-color);
+}
+.sec-list{
+    padding: 10px 0 10px 30px;
+}
+
+/* ------------------------------- */
+/* --------LEFT CONTAINER--------- */
+/* ------------------------------- */
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    width: 65%;    
+    background-color: var(--right-bgr-color);
+    justify-content: space-evenly;
+    /* align-items: center; */
+    padding: 30px 20px 30px 20px;
+    padding: 30px;
+}
+/* BEFORE AND AFTER ORNAMENT */
+
+.ornament-after::after{
+    border-left: 2px solid var(--afbe-vertical-line-color);
+    position: absolute;
+    content: '';
+    left: 5px;
+    top: 19px;
+    height: 100%;
+}
+
+.ornament-before::before{
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background-color: var(--afbe-cicle-color);
+    box-shadow: 0 0 0 6px var(--afbe-shadow-color);
+    border-radius: 50%;
+    padding: 6px;
+    left: 0px;
+    top: 0px;    
+    margin-top: 10px;   
+    z-index: 9; 
+    
+}
+
+
+
+/* --------------------------- */
+/* ABOUT ME */
+/* --------------------------- */
+.about-content{
+}
+
+.sect-title{
+    padding: 15px 0;
+}
+
+
+.name-title{
+    
+}
+
+.formation-content{
+    position: relative;
+
+    
+}
+
+.parraf{
+
+}
+
+
+/* --------------------------- */
+/* EXPIRIENCES SECTION */
+/* --------------------------- */
+
+.expirience-section{
+    position: relative;
+}
+
+.expirience-list{   
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+
+/* --------------------------- */
+/* SUMMARY CARD STYLE */
+/* --------------------------- */
+.card-text{
+    display:flex;    
+    align-items: center;    
+}
+
+.summary-card-details{
+    padding-top: 5px;
+    align-content: space-between;
+}
+
+.summary-card-details .card-text{
+    padding-bottom: 3px;
+    gap:10px;
+}
+
+
+/* --------------------------- */
+/* FORMATION SECTION */
+/* --------------------------- */
+
+
+/* --------------------------- */
+/* SKILLS CONTAINER */
+/* --------------------------- */
+
+.skills-content{
+    display: flex;
+    padding: 10px 0px ;
+    flex-flow: wrap;
+    overflow: hidden;
+}
+.skills-content>button{
+    border: 2px solid var(--green-color-1);
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: var(--white-color);
+}
+
+
+
+/* --------------------------- */
+/*WORK SKILLS TAGS CONTAINER */
+/* --------------------------- */
+.work-skills{
+    overflow: hidden;
+
+}
+.work-skills-tags{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-skills-tags>button{
+    border: 2px solid var(--green-color-1);
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: var(--black-color);
+}
+
+/* --------------------------- */
+/* GENERAL STYLES*/
+/* --------------------------- */
+
+.add-link-style{
+    list-style: none;
+    padding-top: 5px;
+}
+
+.tag{
+    border: 2px solid var(--green-color-1);
+    width: fit-content;
+    border-radius: 20px;  
+    padding: 5px 10px;
+    margin: 3px;      
+}
+
