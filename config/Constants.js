@@ -1,3 +1,4 @@
+// this returns a p containe that recive a text. is thinked to generate a generic p container to be use for other structures.
 export const CARD_TEXT_CONTAINER = (text)=>
 {
     return `<p class="card-text">${text}</p>`
@@ -52,7 +53,7 @@ export const WORK_SKILLS_TAGS =
     "HTML",
     "CSS",
     " Javascript", 
-    "Sql",
+    "MySql",
     "Api rest",
     "Java",
     "Inteligencia artificial",
@@ -64,7 +65,7 @@ export const WORK_SKILLS_TAGS =
     "Mvc",
     "Mantenimiento de computadores",
     "Servicio al cliente",
-    "Servicio al cliente"
+    "Microsoft Excel"
 ]
     
 
