@@ -159,7 +159,18 @@ li {
 }
 
 .sec-list {
+    display: flex;
+    flex-direction: column;
     padding: 10px 0 10px 30px;
+}
+
+.soft-skills-container{
+    padding-bottom: 15px;
+}
+
+#email_adress{
+    min-width: 100px;
+    overflow-wrap: break-word;
 }
 
 /* ------------------------------- */
@@ -258,7 +269,6 @@ li {
     padding-bottom: 3px;
     gap: 10px;
 }
-
 
 /* --------------------------- */
 /* FORMATION SECTION */
@@ -389,7 +399,7 @@ li {
 
 /*temporaly disabled*/
 #print-button {
-    display: none;
+    display: flex;
     transition: all 0.3s ease;
     position: absolute;
     top: 45px;
@@ -439,5 +449,19 @@ li {
         break-inside: avoid;
         min-height: 100%;
         /* padding: 0; */
+    }
+
+    #print-button,
+    #toggle_language,
+    .add-tag-button,
+    .add-link-style {
+        display: none !important;
+    }
+
+    .summary-card-details.summary-card-last.ornament-after::after {
+        display: none !important;
+        border: none !important;
+        height: 0 !important;
+        content: '' !important;
     }
 }

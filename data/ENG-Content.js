@@ -1,18 +1,12 @@
-// this returns a p containe that recive a text. is thinked to generate a generic p container to be use for other structures.
-export const TEXT_CONTAINER = (text)=>
-{
-    return `<p class="card-text">${text}</p>`
-}
-
 export const TITLE = "Curriculum vitae JEHS"
-export const ABOUT_ME = "Sixth-semester Systems Engineering student with a strong background in development (Frontend/Backend), databases, and networks. My experience in bilingual call centers has provided me with advanced communication and problem-solving skills under pressure. I have a versatile and analytical profile, capable of contributing in development, technical support, infrastructure, or analysis. I am proactive, bilingual, and ready to apply technical knowledge to real-world business solutions."
+export const ABOUT_ME = "Systems Engineering student with solid knowledge of programming, databases, and networks. Bilingual, versatile, and analytical profile, capable of contributing in areas of development, technical support, infrastructure, or analysis."
 
 export const SECTIONS_TITLES = {
     contacts_sect_title : "Contacts",
     languajes_sect_title : "Languajes",    
     soft_skill_title : "Soft skills",
     aboutme_sect_title : "About me",
-    expirience_sect_title : "Expirience",
+    experience_sect_title : "Experience",
     formation_sect_title : "Formation",
     work_skill_title : "Work Skills"
 }
@@ -30,8 +24,14 @@ export const LANGUAGES = [
     
 ]
 
-export const EXPIRIENCE_DETAILS = 
-[
+export const EXPERIENCE_DETAILS = 
+[   
+    {
+    position : "Technical Support",  
+    enterprise : "Independent", 
+    description : "Computer support and maintenance services to individuals. preventative and corrective maintenance of hardware and software.", 
+    duration : "January 2015 - Present"  
+    },
     {
     position : "Call center agent",  
     enterprise : "Teleperformance", 
@@ -96,7 +96,7 @@ export const WORK_SKILLS_TAGS =
     
 
 export const ACTIONS = {
-    add_expirience: "Add expirience",
+    add_experience: "Add experience",
     add_formation: "Add formation",
     add_button_txt:" Add +"
 }

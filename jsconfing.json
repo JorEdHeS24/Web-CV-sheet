@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2022",
+    "baseUrl": ".",
+    "checkJs": true,
+    "paths": {
+      "@utils/*": ["utils/*"],
+      "@config/*": ["config/*"],
+      "@ui/*": ["ui/*"],
+      "@events/*": ["events/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
