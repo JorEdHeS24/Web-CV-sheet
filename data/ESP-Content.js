@@ -103,5 +103,12 @@ export const ACTIONS = {
     add_button_txt:" Añadir +"
 }
     
-
+export const TEXTS_ADD_SKILL_MODAL = {
+    modal_title: "Añadir nueva habilidad",
+    input_label: "Nombre de habilidad",
+    add_skill_btn: "añadir habilidad",
+    close_modal: "Cerrar",
+    modal_alert_text: "¡Habilidad añadida con exito!.",
+    modal_alert_text_fail: "¡Error agregando tag nuevo o tag no introducido!."
+}
 

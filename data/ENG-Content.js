@@ -100,3 +100,10 @@ export const ACTIONS = {
     add_formation: "Add formation",
     add_button_txt:" Add +"
 }
+
+export const TEXTS_ADD_SKILL_MODAL = {
+    modal_title: "Add a new skill",
+    input_label: "Skill name",
+    add_skill_btn: "Add Skill",
+    close_modal: "Close",
+}

@@ -1,25 +1,16 @@
 // @ts-check
 
-import { renderLink } from "./ui/components/renderLink.js";
-import { renderNewTag } from "./ui/components/renderNewTag.js";
-import { renderSummaryCard } from "./ui/components/renderSummaryCard.js";
+import { renderLink } from "./ui/renderLink.js";
+import { renderNewTag } from "./ui/renderNewTag.js";
+import { renderSummaryCard } from "./ui/renderSummaryCard.js";
 import { renderLangList } from "./ui/renderLangList.js";
 import { renderAboutMeText, renderPageTitle, renderSectionTitles } from "./ui/renderTexts.js";
 import { TEXT_CONTAINER } from "./utils/textContainer.js";
 import { onLangSwitcher } from "./events/langSwitch.js";
 import "./events/printBtn.js";
+import { addSkillsEvent } from "./events/addSkillsEvent.js";
+import { getContentByLang } from "./utils/getContentByLang.js";
 
-// 1. Function that only imports the module based on the current language.
-async function getContentByLang() {
-    const lang_items = document.getElementById("lang-items");
-    const lang = lang_items?.value || "esp";
-
-    if (lang === "esp") {
-        return await import("./data/ESP-Content.js");
-    } else {
-        return await import("./data/ENG-Content.js");
-    }
-}
 
 
 
@@ -60,18 +51,22 @@ export async function renderContent() {
     renderLink(expirience_list, ACTIONS.add_experience)
     renderLink(formation_list, ACTIONS.add_formation)
 
-    renderNewTag(soft_skills_container, soft_skills_container, SOFT_SKILLS_TAGS, lang_content)
-    renderNewTag(work_skill_container, work_skill_container, WORK_SKILLS_TAGS, lang_content)
+    renderNewTag(SOFT_SKILLS_TAGS, ACTIONS.add_button_txt, soft_skills_container, "modal-btn-soft")
+    renderNewTag(WORK_SKILLS_TAGS, ACTIONS.add_button_txt, work_skill_container, "modal-btn-hard")
     // createTag(skillsContainer, "Proactivo".trim())
 
     renderAboutMeText(TEXT_CONTAINER, ABOUT_ME)
     renderSectionTitles(SECTIONS_TITLES)
     renderLangList(LANGUAGES)
+    
 
     //Events
+    addSkillsEvent("modal-btn-soft")
+    addSkillsEvent("modal-btn-hard")
 
     
 }
+
 
 onLangSwitcher();
 renderContent();
